@@ -32,6 +32,20 @@ export default {
                     // frontend:,
                     live:"https://donovanrichardson.github.io/departures/lirr.html"
                 },
+                {
+                    name:"Wikipollia",
+                    description:"A way to upvote and downvote Wikipedia articles.",
+                    // backend:,
+                    // frontend:,
+                    // live:"https://donovanrichardson.github.io/departures/lirr.html"
+                },
+                {
+                    name:"Job Tracker",
+                    description:"Tracking job listings of interest for the job search.",
+                    // backend:,
+                    // frontend:,
+                    // live:"https://donovanrichardson.github.io/departures/lirr.html"
+                },
             ]
         }
     },
