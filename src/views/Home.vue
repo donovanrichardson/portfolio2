@@ -1,16 +1,22 @@
 <template>
 <div>
-    <h1>Donovan Richardson</h1>
-    <h2>Full Stack Engineer</h2>
-    <!-- Capitalization?? -->
-    <p>Lorem ipsum brandmor state ament, consectetur adipisicing elit. Nam necessitatibus voluptatem quam dolores amet porro fugiat. Illo quae voluptas, quidem provident magni fugiat reiciendis eum impedit quas dicta assumenda unde.</p>
-    <div id="projects" v-for="project in projects" :key="project.name">
-        <div class="project">
-            <h3>{{project.name}}</h3>
-            <p>{{project.description}}</p>
-            <p v-if="project.backend"><a :href="project.backend">Backend</a></p>
-            <p v-if="project.frontend"><a :href="project.frontend">Frontend</a></p>
-            <p v-if="project.live"><a :href="project.live">Live App</a></p>
+    <div id="header"></div>
+    <div id="content">
+        <h1>Donovan Richardson</h1>
+        <h2>Full Stack Engineer</h2>
+        <!-- Capitalization?? -->
+        <p>Lorem ipsum brandmor state ament, consectetur adipisicing elit. Nam necessitatibus voluptatem quam dolores amet porro fugiat. Illo quae voluptas, quidem provident magni fugiat reiciendis eum impedit quas dicta assumenda unde.</p>
+        <div id="projects" v-for="project in projects" :key="project.name">
+            <div class="project">
+                <h3>{{project.name}}</h3>
+                <p>{{project.description}}</p>
+                <p v-if="project.backend"><a :href="project.backend">Backend</a></p>
+                <p v-if="project.frontend"><a :href="project.frontend">Frontend</a></p>
+                <p v-if="project.live"><a :href="project.live">Live App</a></p>
+            </div>
+        </div>
+        <div>
+            <h2>Contact Me</h2>
         </div>
     </div>
 </div>
@@ -24,24 +30,23 @@ export default {
     },
     data: function () {
         return {
-            projects: [
-                {
-                    name:"Deparch",
-                    description:"Train Departure Timetables",
+            projects: [{
+                    name: "Deparch",
+                    description: "Train Departure Timetables",
                     // backend:,
                     // frontend:,
-                    live:"https://donovanrichardson.github.io/departures/lirr.html"
+                    live: "https://donovanrichardson.github.io/departures/lirr.html"
                 },
                 {
-                    name:"Wikipollia",
-                    description:"A way to upvote and downvote Wikipedia articles.",
+                    name: "Wikipollia",
+                    description: "A way to upvote and downvote Wikipedia articles.",
                     // backend:,
                     // frontend:,
                     // live:"https://donovanrichardson.github.io/departures/lirr.html"
                 },
                 {
-                    name:"Job Tracker",
-                    description:"Tracking job listings of interest for the job search.",
+                    name: "Job Tracker",
+                    description: "Tracking job listings of interest for the job search.",
                     // backend:,
                     // frontend:,
                     // live:"https://donovanrichardson.github.io/departures/lirr.html"
@@ -56,5 +61,23 @@ export default {
 </script>
 
 <style>
+html {
+    background: blue;
+}
 
+body {
+    color: white;
+    margin: 0;
+}
+
+#header {
+    height: 40vw;
+    width: 100%;
+    background: #0000007f;
+}
+
+#content{
+    margin: 0 8px;
+    
+}
 </style>
