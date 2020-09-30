@@ -21,6 +21,12 @@
         <div>
             <h2>Contact Me</h2>
         </div>
+        <div id="icons">
+            <font-awesome-icon :icon="['fab', 'github-square']"></font-awesome-icon>
+            <font-awesome-icon :icon="['fab', 'dev']"></font-awesome-icon>
+            <font-awesome-icon :icon="['fab', 'linkedin']"></font-awesome-icon>
+
+        </div>
     </div>
 </div>
 </template>
@@ -36,23 +42,23 @@ export default {
             projects: [{
                     name: "Deparch",
                     description: "Train Departure Timetables",
-                    // backend:,
-                    // frontend:,
+                    backend:"https://github.com/donovanrichardson/deparch-java-backend",
+                    frontend:"https://github.com/donovanrichardson/deparch-java-api",
                     live: "https://donovanrichardson.github.io/departures/lirr.html"
                 },
                 {
                     name: "Wikipollia",
                     description: "A way to upvote and downvote Wikipedia articles.",
-                    // backend:,
-                    // frontend:,
-                    // live:"https://donovanrichardson.github.io/departures/lirr.html"
+                    backend:"https://github.com/donovanrichardson/wikipollia-backend",
+                    frontend:"https://github.com/donovanrichardson/wikipollia-frontend",
+                    live:"https://wikipollia.netlify.app/"
                 },
                 {
                     name: "Job Tracker",
                     description: "Tracking job listings of interest for the job search.",
-                    // backend:,
-                    // frontend:,
-                    // live:"https://donovanrichardson.github.io/departures/lirr.html"
+                    backend:"https://github.com/donovanrichardson/djob-tracker",
+                    frontend:"https://github.com/donovanrichardson/djob-tracker-frontend",
+                    live:"https://jobsearchtracker.netlify.app/"
                 },
             ]
         }
@@ -72,11 +78,12 @@ html {
 body {
     color: white;
     margin: 0;
-    background: #5E51F5;
+    background: #7B75BA;
 }
 
 #header {
     height: 40vw;
+    max-height:60vh;
     width: 100%;
     background: #0000007f;
     display:flex;
@@ -93,11 +100,20 @@ body {
 }
 #content{
     margin: 0 8px;
+    /* background:#ffffff7f; */
+    border-radius: 10px;
 }
 
-#projects{
+@media(min-width:600px){
+    #projects{
     display: grid;
     grid-template-columns:1fr 1fr;  
+}
+}
+
+
+.project{
+    background: rgb(1, 1, 88);
 }
 
 </style>
