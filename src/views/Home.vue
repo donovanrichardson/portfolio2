@@ -147,6 +147,9 @@ export default {
 }
 
 .project {
-    background: rgb(1, 1, 88);
+    color:black;
+    background:#FCC2DD;
+    margin:1em;
+    border-radius: 1em;
 }
 </style>
