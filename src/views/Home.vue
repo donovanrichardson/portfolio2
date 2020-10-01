@@ -18,9 +18,13 @@
             <div class="project" v-for="project in projects" :key="project.name">
                 <h3>{{project.name}}</h3>
                 <p>{{project.description}}</p>
-                <p v-if="project.backend"><a :href="project.backend">Backend</a></p>
-                <p v-if="project.frontend"><a :href="project.frontend">Frontend</a></p>
-                <p v-if="project.live"><a :href="project.live">Live App</a></p>
+                <div class="project-links">
+                    <p class='repos link-label'>Repos:</p>
+                    <p class='app link-label'>Live App:</p>
+                    <p v-if="project.backend" class="backend links-bottom"><a :href="project.backend">Backend</a></p>
+                    <p v-if="project.frontend" class="frontend links-bottom"><a :href="project.frontend">Frontend</a></p>
+                    <p v-if="project.live" class="live links-bottom"><a :href="project.live">Live App</a></p>
+                </div>
             </div>
         </div>
         <div>
@@ -115,8 +119,9 @@ export default {
     width: inherit;
     /* background: #000; */
     height: inherit;
+    max-height: inherit;
     position: absolute;
-    opacity:50%;
+    opacity: 50%;
 }
 
 #header-text {
@@ -147,9 +152,47 @@ export default {
 }
 
 .project {
-    color:black;
-    background:#FCC2DD;
-    margin:1em;
+    color: black;
+    background: #FCC2DD;
+    margin: 1em;
     border-radius: 1em;
 }
+
+.project-links{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        "repo repo app"
+        "back front live";
+
+}
+.link-label{
+    margin: .25em auto;
+}
+
+.links-bottom{
+    font-weight: bold;
+    margin: 1em auto;
+}
+
+.repos{
+    grid-area:repo
+}
+
+.app{
+    grid-area:app
+}
+
+.backend{
+    /* no quotes lol */
+    grid-area:back;
+}
+.frontend{
+    grid-area:front;
+}
+.live{
+    grid-area:live;
+}
+
 </style>
