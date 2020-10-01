@@ -1,12 +1,17 @@
 <template>
-<div>
+<div id='home'>
+
     <div id="header">
+        <div id="header-pic">
+        </div>
         <div id="header-text">
             <h1 id="my-name">Donovan Richardson</h1>
             <h2 id="subtitle">Full Stack Engineer</h2>
-            <!-- Capitalization?? -->
         </div>
+        <!-- <div id="header">
+        </div> -->
     </div>
+
     <div id="content">
         <p>Lorem ipsum brandmor state ament, consectetur adipisicing elit. Nam necessitatibus voluptatem quam dolores amet porro fugiat. Illo quae voluptas, quidem provident magni fugiat reiciendis eum impedit quas dicta assumenda unde.</p>
         <div id="projects">
@@ -42,23 +47,23 @@ export default {
             projects: [{
                     name: "Deparch",
                     description: "Train Departure Timetables",
-                    backend:"https://github.com/donovanrichardson/deparch-java-backend",
-                    frontend:"https://github.com/donovanrichardson/deparch-java-api",
+                    backend: "https://github.com/donovanrichardson/deparch-java-backend",
+                    frontend: "https://github.com/donovanrichardson/deparch-java-api",
                     live: "https://donovanrichardson.github.io/departures/lirr.html"
                 },
                 {
                     name: "Wikipollia",
                     description: "A way to upvote and downvote Wikipedia articles.",
-                    backend:"https://github.com/donovanrichardson/wikipollia-backend",
-                    frontend:"https://github.com/donovanrichardson/wikipollia-frontend",
-                    live:"https://wikipollia.netlify.app/"
+                    backend: "https://github.com/donovanrichardson/wikipollia-backend",
+                    frontend: "https://github.com/donovanrichardson/wikipollia-frontend",
+                    live: "https://wikipollia.netlify.app/"
                 },
                 {
                     name: "Job Tracker",
                     description: "Tracking job listings of interest for the job search.",
-                    backend:"https://github.com/donovanrichardson/djob-tracker",
-                    frontend:"https://github.com/donovanrichardson/djob-tracker-frontend",
-                    live:"https://jobsearchtracker.netlify.app/"
+                    backend: "https://github.com/donovanrichardson/djob-tracker",
+                    frontend: "https://github.com/donovanrichardson/djob-tracker-frontend",
+                    live: "https://jobsearchtracker.netlify.app/"
                 },
             ]
         }
@@ -69,51 +74,79 @@ export default {
 }
 </script>
 
-<style>
-html {
+<style scoped>
+#home {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-family:sans-serif
-}
-
-body {
-    color: white;
-    margin: 0;
+    font-family: sans-serif;
     background: #7B75BA;
+    color: white;
+    text-align: center;
 }
 
 #header {
     height: 40vw;
-    max-height:60vh;
+    max-height: 60vh;
     width: 100%;
-    background: #0000007f;
-    display:flex;
+    /* background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Weekend_work_2012-10-22_21_%288112891452%29.jpg/1280px-Weekend_work_2012-10-22_21_%288112891452%29.jpg"); */
+    background: #7B75BA7f;
+    /* -webkit-filter: grayscale(100%);
+    filter: grayscale(100%); */
+    display: flex;
     justify-content: center;
     align-items: center;
+    /* opacity: 50% */
 }
 
-#my-name{
-    margin-top:0
+/* #header img {
+    width: 100%;
+    height: inherit;
+    max-height: inherit;
+    position: absolute;
+    opacity: 50%;
+} */
+
+#header-pic {
+    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Weekend_work_2012-10-22_21_%288112891452%29.jpg/1280px-Weekend_work_2012-10-22_21_%288112891452%29.jpg");
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    width: inherit;
+    /* background: #000; */
+    height: inherit;
+    position: absolute;
+    opacity:50%;
 }
 
-#subtitle{
-    margin-bottom:0
+#header-text {
+    position: absolute;
+    opacity: 100%;
+    z-index: 1;
 }
-#content{
+
+#my-name {
+    margin-top: 0
+}
+
+#subtitle {
+    margin-bottom: 0
+}
+
+#content {
     margin: 0 8px;
     /* background:#ffffff7f; */
     border-radius: 10px;
 }
 
-@media(min-width:600px){
-    #projects{
-    display: grid;
-    grid-template-columns:1fr 1fr;  
-}
+@media(min-width:600px) {
+    #projects {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
-
-.project{
+.project {
     background: rgb(1, 1, 88);
 }
-
 </style>

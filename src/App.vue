@@ -17,7 +17,7 @@ export default {
 
 <style>
 body{
-  text-align: center;
+   margin: 0;
 }
   h3{
     font-size:1.2em

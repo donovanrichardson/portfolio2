@@ -236,6 +236,7 @@
         </div>
       </div>
     </div>
+      <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
   </main>
 </template>
 
@@ -253,7 +254,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 @font-face {
   font-family: 'Josefin Sans';
   font-style: normal;
