@@ -40,6 +40,19 @@
                         </a>
                     </h6>
                 </div>
+                <div class="info-tag-container">
+                    <i class="fa fa-globe"></i>
+
+                    <h6 class="info-text">
+                      (631) 478-4845
+                    </h6>
+                </div>
+                <div id="brand-statement" class='info-tag-container'>
+                    <h6 class=info-text>
+                        I am a full stack developer with a passion for databases and other backend technologies.
+                        It is important for me to understand patterns patterns as well as of recognizing what these patterns can mean, and this need for understanding informs my approach to software engineering.
+                    </h6>
+                </div>
 
             </div>
             <div class="skills-container">
@@ -94,47 +107,43 @@
             </div>
         </aside>
         <div class="right-column">
-            <div class="container work-container">
+            <div class="container education-container">
                 <div class="title">
-                    <h3>Experience</h3>
+                    <h3>Education</h3>
                     <div class="keyline"></div>
                 </div>
                 <section class="item">
                     <div class="section-header clearfix">
                         <h3 class="bold pull-left">
-                            Lionbridge
+                            Northeastern University
                         </h3>
                         <h5 class="italic pull-right">
-                            <span class="startDate">02/2019</span>
-                            <span class="endDate"> - 08/2019</span>
+                            <span class="startDate">09/2014</span>
+                            <span class="endDate"> - 12/2018</span>
                         </h5>
                     </div>
 
-                    <h4>Linguistic Grader (Contract)</h4>
+                    <h5 class="location">Boston, MA</h5>
 
-                    <ul>
-                        <li>Ensured correct and consistent performance of text-to-speech and speech recognition products for speakers of North American English.</li>
-                        <li>Managed the progression of speech recognition issues using an in-house issue tracker, collaborating with remote, cross-country, and international colleagues.</li>
-                        <li>Used regex in Unix shell to target specific kinds of issues for review.</li>
-                    </ul>
+                    <h4>BS Linguistics</h4>
+
                 </section>
+
                 <section class="item">
                     <div class="section-header clearfix">
                         <h3 class="bold pull-left">
-                            Northeastern University NU Global
+                            General Assembly
                         </h3>
                         <h5 class="italic pull-right">
-                            <span class="startDate">07/2016</span>
-                            <span class="endDate"> - 12/2016</span>
+                            <span class="startDate">06/2020</span>
+                            <span class="endDate"> - 09/2020</span>
                         </h5>
                     </div>
 
-                    <h4>Academic Support Assistant (Co-op)</h4>
+                    <h5 class="location">New York, NY</h5>
 
-                    <ul>
-                        <li>Performed front-end and administrative tasks, including organizing and executing plans for student events, and corresponding with NU Global students and faculty.</li>
-                        <li>Compiled and organized student data using Salesforce, Excel, and Microsoft Access in collaboration with other departments to provide test score results and calculate class grades.</li>
-                    </ul>
+                    <h4>Software Engineering Certificate </h4>
+
                 </section>
             </div>
             <div class="container project-container">
@@ -189,45 +198,50 @@
 
                 </section>
             </div>
-            <div class="container education-container">
+            <div class="container work-container">
                 <div class="title">
-                    <h3>Education</h3>
+                    <h3>Experience</h3>
                     <div class="keyline"></div>
                 </div>
                 <section class="item">
                     <div class="section-header clearfix">
                         <h3 class="bold pull-left">
-                            Northeastern University
+                            Lionbridge
                         </h3>
                         <h5 class="italic pull-right">
-                            <span class="startDate">09/2014</span>
-                            <span class="endDate"> - 12/2018</span>
+                            <span class="startDate">02/2019</span>
+                            <span class="endDate"> - 08/2019</span>
                         </h5>
                     </div>
 
-                    <h5 class="location">Boston, MA</h5>
+                    <h4>Linguistic Grader (Contract)</h4>
 
-                    <h4>BS Linguistics</h4>
-
+                    <ul>
+                        <li>Ensured correct and consistent performance of text-to-speech and speech recognition products for speakers of North American English.</li>
+                        <li>Managed the progression of speech recognition issues using an in-house issue tracker, collaborating with remote, cross-country, and international colleagues.</li>
+                        <li>Used regex in Unix shell to target specific kinds of issues for review.</li>
+                    </ul>
                 </section>
-
                 <section class="item">
                     <div class="section-header clearfix">
                         <h3 class="bold pull-left">
-                            General Assembly
+                            Northeastern University NU Global
                         </h3>
                         <h5 class="italic pull-right">
-                            <span class="startDate">06/2020</span>
-                            <span class="endDate"> - 09/2020</span>
+                            <span class="startDate">07/2016</span>
+                            <span class="endDate"> - 12/2016</span>
                         </h5>
                     </div>
 
-                    <h5 class="location">New York, NY</h5>
+                    <h4>Academic Support Assistant (Co-op)</h4>
 
-                    <h4>Software Engineering Certificate </h4>
-
+                    <ul>
+                        <li>Performed front-end and administrative tasks, including organizing and executing plans for student events, and corresponding with NU Global students and faculty.</li>
+                        <li>Compiled and organized student data using Salesforce, Excel, and Microsoft Access in collaboration with other departments to provide test score results and calculate class grades.</li>
+                    </ul>
                 </section>
             </div>
+
         </div>
     </div>
     <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
@@ -639,4 +653,6 @@ ul.two-column li {
 
     border-radius: 5px;
 }
+
+/* my */
 </style>
