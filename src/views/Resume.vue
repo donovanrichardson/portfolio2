@@ -257,7 +257,7 @@ export default {
 
     },
     beforeMount() {
-        //   document.title="About Résumption"
+          document.title="Donovan Richardson - Resume"
     }
 
 }

@@ -10,11 +10,17 @@ Vue.use(VueRouter)
     path: '/',
     name: 'Home',
     component: Home,
+    meta:{
+      title:"Donovan Richardson - Home"
+    }
   },
   {
     path: '/resume',
     name: 'Resume',
     component: Resume,
+    meta:{
+      title:"Donovan Richardson - Resume"
+    }
   },
 ]
 

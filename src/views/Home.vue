@@ -123,6 +123,9 @@ export default {
     },
     methods: {
 
+    },
+    beforeMount() {
+          document.title="Donovan Richardson - Home"
     }
 }
 </script>
@@ -159,9 +162,9 @@ export default {
 } */
 
 #header-pic {
-    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Weekend_work_2012-10-22_21_%288112891452%29.jpg/1280px-Weekend_work_2012-10-22_21_%288112891452%29.jpg");
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
+    background: url("https://res.cloudinary.com/donovanrichardson/image/upload/e_saturation:-100,e_colorize:50,co_rgb:7B75BA/v1601609602/hicksvillebymta_tcocey.jpg");
+    /* -webkit-filter: grayscale(100%);
+    filter: grayscale(100%); */
     background-size: cover;
     background-position: center;
     z-index: 0;
@@ -170,7 +173,7 @@ export default {
     height: inherit;
     max-height: inherit;
     position: absolute;
-    opacity: 50%;
+    /* opacity: 50%; */
 }
 
 #header-text {
@@ -179,7 +182,6 @@ export default {
     padding: 2em;
     border-radius: 1em;
     position: absolute;
-    opacity: 100%;
     z-index: 1;
     max-height: inherit;
     padding: 0;
