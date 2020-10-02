@@ -13,7 +13,9 @@
     </div>
 
     <div id="content">
-        <p>Lorem ipsum brandmor state ament, consectetur adipisicing elit. Nam necessitatibus voluptatem quam dolores amet porro fugiat. Illo quae voluptas, quidem provident magni fugiat reiciendis eum impedit quas dicta assumenda unde.</p>
+        <p id='brand-statement'>I am a full stack developer with a passion for databases and other backend technologies. As a student of linguistics, I learned the value of simplifying the complicated reality of language into comprehensible elements. I appreciate the importance of looking for sources of data that show various patterns as well as of recognizing what these patterns can mean. My competencies in these areas translate to my skill in software engineering, and geographic information systems, and other fields relating to computer technology.
+</p>
+        <h2>Projects</h2>
         <div id="projects">
             <div class="project" v-for="project in projects" :key="project.name">
                 <h3>{{project.name}}</h3>
@@ -35,8 +37,8 @@
                     </div>
                     <div class="live links-bottom">
                         <p v-if="project.live"><a :href="project.live">Live App <br /> <span>
-                                <font-awesome-icon class="icon" :icon="project.liveicon"></font-awesome-icon>
-                            </span>
+                                    <font-awesome-icon class="icon" :icon="project.liveicon"></font-awesome-icon>
+                                </span>
                             </a>
                         </p>
 
@@ -45,15 +47,29 @@
                 </div>
             </div>
         </div>
-        <div>
-            <h2>Contact Me</h2>
-        </div>
-        <div id="bottom-icons">
-            <font-awesome-icon :icon="['fab', 'github-square']"></font-awesome-icon>
-            <font-awesome-icon :icon="['fab', 'dev']"></font-awesome-icon>
-            <font-awesome-icon :icon="['fab', 'linkedin']"></font-awesome-icon>
+        <footer id="contact-and-resume">
+            <footer id="contact">
+                <div>
+                    <h2>Contact Me</h2>
+                </div>
+                <div id="bottom-icons">
+                    <a href="https://www.linkedin.com/in/donovan-richardson/"><font-awesome-icon :icon="['fab', 'linkedin']"></font-awesome-icon></a>
+                    <a href="https://github.com/donovanrichardson"><font-awesome-icon :icon="['fab', 'github-square']"></font-awesome-icon></a>
+                    <a href="https://dev.to/donovanrichardson"><font-awesome-icon :icon="['fab', 'dev']"></font-awesome-icon></a>
+                    <a href="mailto:donovanspqqa@gmail.com"><font-awesome-icon :icon="['far', 'envelope']"></font-awesome-icon></a>
+                </div>
+            </footer>
+            <footer id="resume">
+                <div>
+                    <h2>Resume</h2>
+                </div>
+                <router-link to='/resume'><font-awesome-icon id='resume-icon' :icon="['far', 'file-alt']"></font-awesome-icon></router-link>
+                
 
-        </div>
+            </footer>
+
+        </footer>
+
     </div>
 </div>
 </template>
@@ -159,12 +175,19 @@ export default {
 
 #header-text {
     background: #ffffffaf;
-    color:black;
+    color: black;
     padding: 2em;
-    border-radius:1em;
+    border-radius: 1em;
     position: absolute;
     opacity: 100%;
     z-index: 1;
+    max-height: inherit;
+    padding: 0;
+}
+
+#header-text > *{
+    margin:0;
+    padding: .25em;
 }
 
 #my-name {
@@ -181,8 +204,15 @@ export default {
     border-radius: 10px;
 }
 
+#brand-statement{
+    text-align: justify;
+    margin: 1.5em 3em 0 3em;
+}
+
 @media(min-width:600px) {
-    #projects {
+
+    #projects,
+    #contact-and-resume {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
@@ -192,6 +222,7 @@ export default {
     color: black;
     background: #FCC2DD;
     margin: 1em;
+    padding:.1em;
     border-radius: 1em;
 }
 
@@ -245,11 +276,30 @@ export default {
     grid-area: live;
 }
 
-#bottom-icons{
-    font-size: 2em;
+#bottom-icons {
+    font-size: 3em;
+    display: grid;
+    grid-template: auto auto / auto auto;
 }
 
-#bottom-icons > *{
-    margin: 0 0.5em;
+#contact-and-resume  a{
+    color: white;
+}
+
+#contact{
+    margin-right: 2em;
+    margin-left: 2em;
+}
+
+#bottom-icons>* {
+    margin: .25em auto;
+}
+
+#resume-icon {
+    font-size: 10em;
+}
+
+#contact-and-resume {
+    padding: 2em 0;
 }
 </style>
