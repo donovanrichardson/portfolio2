@@ -19,18 +19,36 @@
                 <h3>{{project.name}}</h3>
                 <p>{{project.description}}</p>
                 <div class="project-links">
-                    <p class='repos link-label'>Repos:</p>
-                    <p class='app link-label'>Live App:</p>
-                    <p v-if="project.backend" class="backend links-bottom"><a :href="project.backend">Backend</a></p>
-                    <p v-if="project.frontend" class="frontend links-bottom"><a :href="project.frontend">Frontend</a></p>
-                    <p v-if="project.live" class="live links-bottom"><a :href="project.live">Live App</a></p>
+                    <!-- <p class='repos link-label'>Repos:</p>
+                    <p class='app link-label'>Live App:</p> -->
+                    <div class="backend links-bottom">
+                        <p v-if="project.backend"><a :href="project.backend">Backend</a></p>
+                        <span :title="project.backtext">
+                            <font-awesome-icon class="icon" :icon="project.backicon"></font-awesome-icon>
+                        </span>
+                    </div>
+                    <div class="frontend links-bottom">
+                        <p v-if="project.frontend"><a :href="project.frontend">Frontend</a></p>
+                        <span :title="project.fronttext">
+                            <font-awesome-icon class="icon" :icon="project.fronticon"></font-awesome-icon>
+                        </span>
+                    </div>
+                    <div class="live links-bottom">
+                        <p v-if="project.live"><a :href="project.live">Live App <br /> <span>
+                                <font-awesome-icon class="icon" :icon="project.liveicon"></font-awesome-icon>
+                            </span>
+                            </a>
+                        </p>
+
+                    </div>
+
                 </div>
             </div>
         </div>
         <div>
             <h2>Contact Me</h2>
         </div>
-        <div id="icons">
+        <div id="bottom-icons">
             <font-awesome-icon :icon="['fab', 'github-square']"></font-awesome-icon>
             <font-awesome-icon :icon="['fab', 'dev']"></font-awesome-icon>
             <font-awesome-icon :icon="['fab', 'linkedin']"></font-awesome-icon>
@@ -51,23 +69,38 @@ export default {
             projects: [{
                     name: "Deparch",
                     description: "Train Departure Timetables",
-                    backend: "https://github.com/donovanrichardson/deparch-java-backend",
-                    frontend: "https://github.com/donovanrichardson/deparch-java-api",
-                    live: "https://donovanrichardson.github.io/departures/lirr.html"
+                    backend: "https://github.com/donovanrichardson/deparch-java-api",
+                    frontend: "https://github.com/donovanrichardson/donovanrichardson.github.io/blob/master/departures/lirr.html",
+                    live: "https://donovanrichardson.github.io/departures/lirr.html",
+                    backicon: ['fab', 'java'],
+                    backtext: "Backend in Java",
+                    fronticon: ['fab', 'js'],
+                    fronttext: "Frontend in vanilla JavaScript",
+                    liveicon: ['fas', 'newspaper'],
                 },
                 {
                     name: "Wikipollia",
                     description: "A way to upvote and downvote Wikipedia articles.",
                     backend: "https://github.com/donovanrichardson/wikipollia-backend",
                     frontend: "https://github.com/donovanrichardson/wikipollia-frontend",
-                    live: "https://wikipollia.netlify.app/"
+                    live: "https://wikipollia.netlify.app/",
+                    backicon: ['fab', 'node-js'],
+                    backtext: "Backend in Node.js with Express",
+                    fronticon: ['fab', 'js'],
+                    fronttext: "Frontend in JavaScript with jQuery",
+                    liveicon: ['fas', 'thumbs-up'],
                 },
                 {
                     name: "Job Tracker",
                     description: "Tracking job listings of interest for the job search.",
                     backend: "https://github.com/donovanrichardson/djob-tracker",
                     frontend: "https://github.com/donovanrichardson/djob-tracker-frontend",
-                    live: "https://jobsearchtracker.netlify.app/"
+                    live: "https://jobsearchtracker.netlify.app/",
+                    backicon: ['fab', 'python'],
+                    backtext: "Backend in Python Django",
+                    fronticon: ['fab', 'vuejs'],
+                    fronttext: "Frontend in Vue.js",
+                    liveicon: ['fas', 'briefcase'],
                 },
             ]
         }
@@ -125,6 +158,10 @@ export default {
 }
 
 #header-text {
+    background: #ffffffaf;
+    color:black;
+    padding: 2em;
+    border-radius:1em;
     position: absolute;
     opacity: 100%;
     z-index: 1;
@@ -158,41 +195,61 @@ export default {
     border-radius: 1em;
 }
 
-.project-links{
-    display:grid;
+.project-links {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto;
-    grid-template-areas: 
+    grid-template-areas:
         "repo repo app"
         "back front live";
 
 }
-.link-label{
+
+.link-label {
     margin: .25em auto;
 }
 
-.links-bottom{
+.links-bottom {
     font-weight: bold;
     margin: 1em auto;
 }
 
-.repos{
-    grid-area:repo
+.links-bottom p {
+    margin: 0 auto;
 }
 
-.app{
-    grid-area:app
+.icon {
+    font-size: 1.5em;
+    margin: .5em;
+    color: black;
 }
 
-.backend{
+.repos {
+    grid-area: repo
+}
+
+.app {
+    grid-area: app
+}
+
+.backend {
     /* no quotes lol */
-    grid-area:back;
-}
-.frontend{
-    grid-area:front;
-}
-.live{
-    grid-area:live;
+    grid-area: back;
 }
 
+.frontend {
+    grid-area: front;
+}
+
+.live {
+    grid-area: live;
+}
+
+#bottom-icons{
+    font-size: 2em;
+}
+
+#bottom-icons > *{
+    margin: 0 0.5em;
+}
 </style>
