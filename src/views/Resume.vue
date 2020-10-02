@@ -125,7 +125,8 @@
 
                     <h5 class="location">Boston, MA</h5>
 
-                    <h4>BS Linguistics</h4>
+                    <h4>BS in Linguistics</h4>
+                    <h4>Minors in Computer Science and Japanese</h4>
 
                 </section>
 
@@ -143,6 +144,7 @@
                     <h5 class="location">New York, NY</h5>
 
                     <h4>Software Engineering Certificate </h4>
+                    <h4>Throughout the 12-week Software Engineering Immersive course, I used technologies such as Express, Ruby on Rails, and Python Django, and Vue to create full-stack applications, with an emphasis on object-oriented programming and algorithmic thinking.  </h4>
 
                 </section>
             </div>
@@ -654,5 +656,10 @@ ul.two-column li {
     border-radius: 5px;
 }
 
-/* my */
+/* my style*/
+
+.item li{
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
 </style>
