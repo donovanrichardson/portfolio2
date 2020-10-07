@@ -7,14 +7,37 @@
         <div id="header-text">
             <h1 id="my-name">Donovan Richardson</h1>
             <h2 id="subtitle">Full Stack Engineer</h2>
+            <div id='top-icons'>
+                <a href="https://www.linkedin.com/in/donovan-richardson/">
+                    <font-awesome-icon :icon="['fab', 'linkedin']"></font-awesome-icon>
+                </a>
+                <a href="https://github.com/donovanrichardson">
+                    <font-awesome-icon :icon="['fab', 'github-square']"></font-awesome-icon>
+                </a>
+                <a href="https://dev.to/donovanrichardson">
+                    <font-awesome-icon :icon="['fab', 'dev']"></font-awesome-icon>
+                </a>
+                <a href="mailto:donovanspqqa@gmail.com">
+                    <font-awesome-icon :icon="['far', 'envelope']"></font-awesome-icon>
+                </a>
+                <br/>
+                <router-link id='resume-row' to='/resume'>
+                    <font-awesome-icon id='resume-icon' :icon="['far', 'file-alt']"></font-awesome-icon>
+                    <span id="resume-label">Resume</span>
+                    
+                </router-link>
+            </div>
         </div>
         <!-- <div id="header">
         </div> -->
     </div>
 
     <div id="content">
-        <p id='brand-statement'>I am a full stack developer with a passion for databases and other backend technologies. As a student of linguistics, I learned the value of simplifying the complicated reality of language into comprehensible elements. I appreciate the importance of looking for sources of data that show various patterns as well as of recognizing what these patterns can mean. My competencies in these areas translate to my skill in software engineering, and geographic information systems, and other fields relating to computer technology.
-</p>
+        <p id='brand-statement'>I am a full stack developer and a transit nerd with a passion for databases and other backend technologies. 
+            As a student of linguistics, I learned the value of simplifying the complicated reality of language into comprehensible elements. 
+            I appreciate the importance of looking for sources of data that show various patterns as well as of recognizing what these patterns can mean. 
+            My competencies in these areas translate to my skill in software engineering, and geographic information systems, and other fields relating to computer technology.
+        </p>
         <h2>Projects</h2>
         <div id="projects">
             <div class="project" v-for="project in projects" :key="project.name">
@@ -47,28 +70,6 @@
                 </div>
             </div>
         </div>
-        <footer id="contact-and-resume">
-            <footer id="contact">
-                <div>
-                    <h2>Contact Me</h2>
-                </div>
-                <div id="bottom-icons">
-                    <a href="https://www.linkedin.com/in/donovan-richardson/"><font-awesome-icon :icon="['fab', 'linkedin']"></font-awesome-icon></a>
-                    <a href="https://github.com/donovanrichardson"><font-awesome-icon :icon="['fab', 'github-square']"></font-awesome-icon></a>
-                    <a href="https://dev.to/donovanrichardson"><font-awesome-icon :icon="['fab', 'dev']"></font-awesome-icon></a>
-                    <a href="mailto:donovanspqqa@gmail.com"><font-awesome-icon :icon="['far', 'envelope']"></font-awesome-icon></a>
-                </div>
-            </footer>
-            <footer id="resume">
-                <div>
-                    <h2>Resume</h2>
-                </div>
-                <router-link to='/resume'><font-awesome-icon id='resume-icon' :icon="['far', 'file-alt']"></font-awesome-icon></router-link>
-                
-
-            </footer>
-
-        </footer>
 
     </div>
 </div>
@@ -125,7 +126,7 @@ export default {
 
     },
     beforeMount() {
-          document.title="Donovan Richardson - Home"
+        document.title = "Donovan Richardson - Home"
     }
 }
 </script>
@@ -187,8 +188,8 @@ export default {
     padding: 0;
 }
 
-#header-text > *{
-    margin:0;
+#header-text>* {
+    margin: 0;
     padding: .25em;
 }
 
@@ -206,7 +207,11 @@ export default {
     border-radius: 10px;
 }
 
-#brand-statement{
+#brand-statement {
+    background: #ffffff7f;
+    padding: 1em;
+    border-radius:1em;
+    color:black;
     text-align: justify;
     margin: 1.5em 3em 0 3em;
 }
@@ -224,7 +229,7 @@ export default {
     color: black;
     background: #FCC2DD;
     margin: 1em;
-    padding:.1em;
+    padding: .1em;
     border-radius: 1em;
 }
 
@@ -278,28 +283,40 @@ export default {
     grid-area: live;
 }
 
-#bottom-icons {
-    font-size: 3em;
-    display: grid;
-    grid-template: auto auto / auto auto;
+#top-icons {
+    font-size: 1.5em;
+    
+    /* display: grid;
+    grid-template: auto auto / auto auto; */
 }
 
-#contact-and-resume  a{
+#contact-and-resume a {
     color: white;
 }
 
-#contact{
+#contact {
     margin-right: 2em;
     margin-left: 2em;
 }
 
-#bottom-icons>* {
-    margin: .25em auto;
+#top-icons>* {
+    margin: .25em .25em;
+    color: black;
+    text-decoration: none;
 }
 
-#resume-icon {
-    font-size: 10em;
+#resume-label{
+    margin: auto 5px;
+    
 }
+
+#resume-row{
+    font-size: .85em;
+}
+
+/* #resume-icon {
+    font-size: 10em;
+} */
 
 #contact-and-resume {
     padding: 2em 0;

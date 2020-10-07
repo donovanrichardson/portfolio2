@@ -14,7 +14,7 @@
                 <div class="title">
                     <h3>About</h3>
                     <div class="keyline"></div>
-                </div>                
+                </div>
                 <div id="brand-statement" class='info-tag-container'>
                     <h6 class=info-text>
                         I am a full stack developer with a passion for databases and other backend technologies.
@@ -22,13 +22,13 @@
                     </h6>
                 </div>
                 <div class="info-tag-container">
-                    <font-awesome-icon class="fa fa-map-marker" :icon="['fas','map-marker-alt']"/>
+                    <font-awesome-icon class="fa fa-map-marker" :icon="['fas','map-marker-alt']" />
 
                     <h6 class="info-text">Greater New York City Area </h6>
                 </div>
 
                 <div class="info-tag-container">
-                    <font-awesome-icon :icon="['far', 'envelope']" class="fa fa-envelope-o"/>
+                    <font-awesome-icon :icon="['far', 'envelope']" class="fa fa-envelope-o" />
 
                     <h6 class="info-text">
                         <a href="mailto:donovanspqa@gmail.com" target="_blank">
@@ -38,22 +38,30 @@
                 </div>
 
                 <div class="info-tag-container">
-                    <font-awesome-icon class="fa fa-globe" :icon="['fas', 'globe-americas']"/>
+                    <font-awesome-icon class="fa fa-globe" :icon="['fab', 'linkedin']" />
 
                     <h6 class="info-text">
-                        <a href="linkedin.com/in/donovan-richardson/" target="_blank">
+                        <a href="https://linkedin.com/in/donovan-richardson/" target="_blank">
                             linkedin.com/in/donovan-richardson/
                         </a>
                     </h6>
                 </div>
                 <div class="info-tag-container">
-                    <font-awesome-icon :icon="['fas', 'mobile-alt']" class="fa fa-globe"/>
+                    <font-awesome-icon class="fa fa-globe" :icon="['fas', 'globe-americas']" />
 
                     <h6 class="info-text">
-                      (631) 478-4845
+                        <a href="https://donovanrichardson.surge.sh" target="_blank">
+                            donovanrichardson.surge.sh
+                        </a>
                     </h6>
                 </div>
+                <div class="info-tag-container">
+                    <font-awesome-icon :icon="['fas', 'mobile-alt']" class="fa fa-globe" />
 
+                    <h6 class="info-text">
+                        (631) 478-4845
+                    </h6>
+                </div>
 
             </div>
             <div class="skills-container">
@@ -116,6 +124,23 @@
                 <section class="item">
                     <div class="section-header clearfix">
                         <h3 class="bold pull-left">
+                            General Assembly
+                        </h3>
+                        <h5 class="italic pull-right">
+                            <span class="startDate">06/2020</span>
+                            <span class="endDate"> - 09/2020</span>
+                        </h5>
+                    </div>
+
+                    <h5 class="location">New York, NY</h5>
+
+                    <h4>Software Engineering Certificate </h4>
+                    <h4>Throughout the 12-week Software Engineering Immersive course, I used technologies such as Express, Ruby on Rails, and Python Django, and Vue to create full-stack applications, with an emphasis on object-oriented programming and algorithmic thinking. </h4>
+
+                </section>
+                <section class="item">
+                    <div class="section-header clearfix">
+                        <h3 class="bold pull-left">
                             Northeastern University
                         </h3>
                         <h5 class="italic pull-right">
@@ -131,23 +156,6 @@
 
                 </section>
 
-                <section class="item">
-                    <div class="section-header clearfix">
-                        <h3 class="bold pull-left">
-                            General Assembly
-                        </h3>
-                        <h5 class="italic pull-right">
-                            <span class="startDate">06/2020</span>
-                            <span class="endDate"> - 09/2020</span>
-                        </h5>
-                    </div>
-
-                    <h5 class="location">New York, NY</h5>
-
-                    <h4>Software Engineering Certificate </h4>
-                    <h4>Throughout the 12-week Software Engineering Immersive course, I used technologies such as Express, Ruby on Rails, and Python Django, and Vue to create full-stack applications, with an emphasis on object-oriented programming and algorithmic thinking.  </h4>
-
-                </section>
             </div>
             <div class="container project-container">
                 <div class="title">
@@ -157,17 +165,18 @@
                 <section class="item">
                     <div class="section-header clearfix">
                         <h3 class="bold pull-left">
-                            <a href="github.com/donovanrichardson/deparch" target="_blank">
+                            <a href="https://github.com/donovanrichardson/deparch" target="_blank">
                                 Departures
-                                <span class="sublink">∙ <a href="github.com/donovanrichardson/deparch" target="_blank" class="sublink">github.com/donovanrichardson/deparch</a></span>
+                                <span class="sublink">∙ <a href="https://github.com/donovanrichardson/deparch" target="_blank" class="sublink">github.com/donovanrichardson/deparch</a></span>
                             </a>
                         </h3>
                         <h5 class="italic pull-right">
                         </h5>
                     </div>
-                    <h4>
-                        Integrated the OpenMobilityData API to import agancy-created transit data and generate departure timetables for the Long Island Rail Road and SEPTA Rail (Philadelphia). Designed a PostgreSQL database schema for transit data, performing multi-table joins to serve results.
-                    </h4>
+                    <ul>
+                        <li>Integrated the OpenMobilityData API to import agancy-created transit data and generate departure timetables for the Long Island Rail Road and SEPTA Rail (Philadelphia).</li>
+                        <li>Designed a PostgreSQL database schema for transit data, performing multi-table joins to serve results.</li>
+                    </ul>
 
                     <div class="flex-container">
                         <h6 class="skill">PostgreSQL</h6>
@@ -180,17 +189,18 @@
                 <section class="item">
                     <div class="section-header clearfix">
                         <h3 class="bold pull-left">
-                            <a href="github.com/donovanrichardson/jobs-tracker" target="_blank">
+                            <a href="https://github.com/donovanrichardson/jobs-tracker" target="_blank">
                                 Job Tracker
-                                <span class="sublink">∙ <a href="github.com/donovanrichardson/jobs-tracker" target="_blank" class="sublink">github.com/donovanrichardson/jobs-tracker</a></span>
+                                <span class="sublink">∙ <a href="https://github.com/donovanrichardson/jobs-tracker" target="_blank" class="sublink">github.com/donovanrichardson/jobs-tracker</a></span>
                             </a>
                         </h3>
                         <h5 class="italic pull-right">
                         </h5>
                     </div>
-                    <h4>
-                        Created a job tracking app, using a web scraping utility to import job listings from LinkedIn and Indeed, allowing users to track their job applications. Utilized a text analysis package to extract keywords from job descriptions and display them in the job tracker.
-                    </h4>
+                    <ul>
+                        <li>Created a job tracking app, using a web scraping utility to import job listings from LinkedIn and Indeed, allowing users to track their job applications.</li>
+                        <li>Utilized a text analysis package to extract keywords from job descriptions and display them in the job tracker.</li>
+                    </ul>
 
                     <div class="flex-container">
                         <h6 class="skill">MongoDB</h6>
@@ -203,7 +213,7 @@
             </div>
             <div class="container work-container">
                 <div class="title">
-                    <h3>Experience</h3>
+                    <h3>Selected Experience</h3>
                     <div class="keyline"></div>
                 </div>
                 <section class="item">
@@ -258,7 +268,7 @@ export default {
 
     },
     beforeMount() {
-          document.title="Donovan Richardson - Resume"
+        document.title = "Donovan Richardson - Resume"
     }
 
 }
@@ -621,7 +631,7 @@ ul.two-column li {
     display: inline-block;
     vertical-align: middle;
     width: 139px;
-    margin:5px 0;
+    margin: 5px 0;
 }
 
 .references-container .fa {
@@ -660,8 +670,8 @@ ul.two-column li {
 
 /* my style*/
 
-.item li{
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-weight: 300;
+.item li {
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-weight: 300;
 }
 </style>
