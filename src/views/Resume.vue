@@ -14,15 +14,21 @@
                 <div class="title">
                     <h3>About</h3>
                     <div class="keyline"></div>
+                </div>                
+                <div id="brand-statement" class='info-tag-container'>
+                    <h6 class=info-text>
+                        I am a full stack developer with a passion for databases and other backend technologies.
+                        It is important for me to understand patterns patterns as well as of recognizing what these patterns can mean, and this need for understanding informs my approach to software engineering.
+                    </h6>
                 </div>
                 <div class="info-tag-container">
-                    <i class="fa fa-map-marker"></i>
+                    <font-awesome-icon class="fa fa-map-marker" :icon="['fas','map-marker-alt']"/>
 
                     <h6 class="info-text">Greater New York City Area </h6>
                 </div>
 
                 <div class="info-tag-container">
-                    <i class="fa fa-envelope-o"></i>
+                    <font-awesome-icon :icon="['far', 'envelope']" class="fa fa-envelope-o"/>
 
                     <h6 class="info-text">
                         <a href="mailto:donovanspqa@gmail.com" target="_blank">
@@ -32,7 +38,7 @@
                 </div>
 
                 <div class="info-tag-container">
-                    <i class="fa fa-globe"></i>
+                    <font-awesome-icon class="fa fa-globe" :icon="['fas', 'globe-americas']"/>
 
                     <h6 class="info-text">
                         <a href="linkedin.com/in/donovan-richardson/" target="_blank">
@@ -41,18 +47,13 @@
                     </h6>
                 </div>
                 <div class="info-tag-container">
-                    <i class="fa fa-globe"></i>
+                    <font-awesome-icon :icon="['fas', 'mobile-alt']" class="fa fa-globe"/>
 
                     <h6 class="info-text">
                       (631) 478-4845
                     </h6>
                 </div>
-                <div id="brand-statement" class='info-tag-container'>
-                    <h6 class=info-text>
-                        I am a full stack developer with a passion for databases and other backend technologies.
-                        It is important for me to understand patterns patterns as well as of recognizing what these patterns can mean, and this need for understanding informs my approach to software engineering.
-                    </h6>
-                </div>
+
 
             </div>
             <div class="skills-container">
@@ -593,7 +594,7 @@ ul.two-column li {
 }
 
 .info-tag-container .fa.fa-map-marker {
-    font-size: 16px;
+    /* font-size: 16px; */
 }
 
 .info-tag-container .fa.fa-mobile {
@@ -615,11 +616,12 @@ ul.two-column li {
 }
 
 .info-tag-container .info-text {
-    font-size: 12px;
+    font-size: 11px;
     text-transform: none;
     display: inline-block;
     vertical-align: middle;
     width: 139px;
+    margin:5px 0;
 }
 
 .references-container .fa {
