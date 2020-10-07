@@ -381,8 +381,8 @@ h3.bold {
 
 h4 {
     font-family: "Lato", Helvetica, Arial, sans-serif;
-    font-weight: 300;
-    font-size: 12px;
+    font-weight: normal;
+    font-size: 11px;
 }
 
 h4.bold {
@@ -672,6 +672,7 @@ ul.two-column li {
 
 .item li {
     font-family: "Lato", Helvetica, Arial, sans-serif;
-    font-weight: 300;
+    font-weight: normal;
+    font-size:11px
 }
 </style>
