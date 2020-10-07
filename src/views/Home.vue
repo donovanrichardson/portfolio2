@@ -231,7 +231,17 @@ export default {
     margin: 1em;
     padding: .1em;
     border-radius: 1em;
+    display:grid;
+    grid-template-rows: 2fr 2fr 5fr;
 }
+
+.project > p{
+    margin: .25em auto;
+}
+.project > h3{
+    margin: .5em auto;
+}
+
 
 .project-links {
     display: grid;
